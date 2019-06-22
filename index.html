@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Index | Flower Farm</title>
+
+    <style>
+        /* For mobile phones: */
+        [class*="col-"] {
+            width: 100%;
+        }
+
+        /* Style inputs */
+        input[type=text],
+        select {
+            width: 100%;
+            margin: 8px 0;
+            display: inline-block;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            padding: .25rem .5rem;
+            font-size: .875rem;
+        }
+
+        /* Style the submit button */
+        .btn {
+            border: 2px solid black;
+            background-color: white;
+            color: black;
+            cursor: pointer;
+
+            width: 100%;
+            border-radius: 4px;
+            margin: 8px 0;
+
+            padding: .25rem .5rem;
+            font-size: .875rem;
+            line-height: 1.5;
+        }
+
+        /* Green */
+        .success {
+            border-color: #4CAF50;
+            color: green;
+        }
+
+        .success:hover {
+            background-color: #4CAF50;
+            color: white;
+        }
+
+        .card {
+            /* Add shadows to create the "card" effect */
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+            border-radius: 4px;
+            margin: 0px 0px 25px 0px;
+        }
+
+        /* On mouse-over, add a deeper shadow */
+        .card:hover {
+            box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+        }
+
+        /* Add some padding inside the card container */
+        .container {
+            padding: 16px;
+        }
+
+        .slidecontainer {
+            width: 100%;
+        }
+        .slider {
+            -webkit-appearance: none;
+            appearance: none;
+            width: 100%;
+            height: 20px;
+            background: #d3d3d3;
+            outline: none;
+            opacity: 0.7;
+            -webkit-transition: .2s;
+            transition: opacity .2s;
+            border-radius: 10px ;
+        }
+
+        /* Mouse-over effects */
+        .slider:hover {
+            opacity: 1;
+        }
+
+        .slider::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            appearance: none;
+            width: 20px;
+            height: 20px;
+            background: #4CAF50;
+            cursor: pointer;
+            border-radius: 50% ;
+        }
+
+        h1{
+            color:#4CAF50 ;
+            text-align: center;
+            text-decoration: underline;
+        }
+        h2{
+            color:green ;
+        }
+        h3{
+            color: red;
+        }
+        
+    </style>
+</head>
+
+<body>
+    <main>
+        <div class="container">
+            <h1 class="text-green">Green House IoT</h1>
+            <div class="card">
+                <form action="#">
+                    <div class="card">
+                        <div class="container">
+                            <h2>Green House Data</h2>
+                            <label for="week">Block</label>
+                            <select id="block" name="block">
+                                <option value="A">A</option>
+                                <option value="B">B</option>
+                                <option value="C">C</option>
+                                <option value="D">D</option>
+                            </select>
+                            <label for="bed">Bed</label>
+                            <select id="bed" name="bed">
+                                <option value="a">a</option>
+                                <option value="b">b</option>
+                                <option value="c">c</option>
+                                <option value="d">d</option>
+                            </select>
+                            <label for="week">Week</label>
+                            <select id="week" name="week">
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                            </select>
+                        </div>
+                    </div>
+                
+                    <div class="card">
+                        <div class="container">
+                            <h2>Flower Data</h2>
+                            <label for="flower">Flower</label>
+                            <select id="flower" name="flower">
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                            </select>
+                            <label for="section">Section</label>
+                            <select id="section" name="section">
+                                <option value="top">Top</option>
+                                <option value="middle">Middle</option>
+                                <option value="base">Base</option>
+                            </select>
+                        </div>
+                    </div>
+                
+                    <div class="card">
+                        <div class="container">
+                            <h2>Check Data</h2>
+                            <h3>1. Health</h3>
+                            <div class="slidecontainer">
+                                <label for="water">Water</label>
+                                <input type="range" min="0" max="100" value="0" class="slider" id="water" name="water">
+                
+                                <label for="nutrition">Nutrition</label>
+                                <input type="range" min="0" max="100" value="0" class="slider" id="nutrition" name="nutrition">
+                            </div>
+                
+                            <h3>2. Bugs</h3>
+                            <label for="bugs_count">Bugs count</label>
+                            <select id="bugs_count" name="bugs_count">
+                                <option value="0">nill</option>
+                                <option value="1">&lt 10</option>
+                                <option value="2">&gt 10</option>
+                            </select>
+                
+                            <label for="caterpillars">Caterpillars</label>
+                            <select id="caterpillars" name="caterpillars">
+                                <option value="0">No Caterpillars</option>
+                                <option value="1">Lavae</option>
+                                <option value="2">Adults</option>
+                            </select>
+                
+                            <label for="thrips">Thrips</label>
+                            <select id="thrips" name="thrips">
+                                <option value="0">No Thrips</option>
+                                <option value="1">Lavae</option>
+                                <option value="2">Adults</option>
+                            </select>
+                
+                            <label for="meaty">Meaty Bugs</label>
+                            <select id="meaty" name="meaty">
+                                <option value="0">No Meaty Bugs</option>
+                                <option value="1">Lavae</option>
+                                <option value="2">Adults</option>
+                            </select>
+                        </div>
+                    </div>
+                    <button class="btn success">Submit</button>
+                </form>
+            </div>
+        </div>
+    </main>
+</body>
+
+</html>
